@@ -9,6 +9,12 @@ import {
 } from '@angular/core';
 
 declare const createUnityInstance: any;
+interface UnityInstance {
+  SetFullscreen(mode: number): void;
+  SendMessage(objectName: string, methodName: string, value?: any): void;
+  Quit(): Promise<void>;
+  Module?: any;
+}
 
 @Component({
   selector: 'app-unity-player',
@@ -20,7 +26,7 @@ export class UnityPlayer implements AfterViewInit, OnDestroy {
   @ViewChild('unityCanvas', { static: true })
   canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  unityInstance: any = null;
+  unityInstance: UnityInstance | null = null;
   progress = 0;
   loading = true;
 
@@ -42,7 +48,7 @@ export class UnityPlayer implements AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     if (this.unityInstance) {
-      this.unityInstance.Quit().then(() => console.log('Unity quit'));
+      this.unityInstance.Quit();
     }
   }
 
@@ -53,13 +59,14 @@ export class UnityPlayer implements AfterViewInit, OnDestroy {
         return;
       }
 
-      const s = document.createElement('script');
-      s.src = src;
-      s.async = true;
-      s.setAttribute('data-src', src);
-      s.onload = () => resolve();
-      s.onerror = (e) => reject(new Error(`Failed to load script ${src}`));
-      document.body.appendChild(s);
+      const scriptElement = document.createElement('script');
+      scriptElement.src = src;
+      scriptElement.async = true;
+      scriptElement.setAttribute('data-src', src);
+      scriptElement.onload = () => resolve();
+      scriptElement.onerror = (e) =>
+        reject(new Error(`Failed to load script ${src}`));
+      document.body.appendChild(scriptElement);
     });
   }
 
