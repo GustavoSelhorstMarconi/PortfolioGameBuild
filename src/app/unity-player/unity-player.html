@@ -1,0 +1,10 @@
+<div class="unity-container">
+  @if (loading) {
+  <div class="unity-loader">
+    <div class="loader-circle"></div>
+    <p>Carregando jogo... {{ progress * 100 | number : "1.0-0" }}%</p>
+  </div>
+  }
+
+  <canvas #unityCanvas id="unity-canvas"></canvas>
+</div>
