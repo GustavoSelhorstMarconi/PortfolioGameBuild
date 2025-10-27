@@ -1,59 +1,17 @@
-# PortfolioGame
+# Angular + Unity WebGL
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+Este projeto integra um **jogo Unity WebGL** dentro de uma aplicação **Angular standalone (Angular 17+)**.  
+O jogo é carregado dinamicamente, exibindo uma tela de **loading** e iniciando automaticamente em **tela cheia**.
+O jogo em si é um portfólio em formato de jogo, no qual é possível controlar um jogador e ao explorar o ambiente, encontrar informações sobre o desenvolvedor, como projetos, redes, etc.
 
-## Development server
+---
 
-To start a local development server, run:
+## Funcionalidades
 
-```bash
-ng serve
-```
+- Carregamento do Unity WebGL com **progress bar**.  
+- Entrada automática em **tela cheia**.  
+- Redimensionamento do canvas conforme o tamanho da janela.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Imagens
+<img width="1867" height="921" alt="image" src="https://github.com/user-attachments/assets/7fd8b1f9-e21c-4196-a02b-d4f0c77da014" />
+<img width="1872" height="922" alt="image" src="https://github.com/user-attachments/assets/7459b395-a73a-49f7-b4f0-4208ab11960d" />
