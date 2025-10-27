@@ -11,3 +11,7 @@ O jogo em si é um portfólio em formato de jogo, no qual é possível controlar
 - Carregamento do Unity WebGL com **progress bar**.  
 - Entrada automática em **tela cheia**.  
 - Redimensionamento do canvas conforme o tamanho da janela.
+
+## Imagens
+<img width="1867" height="921" alt="image" src="https://github.com/user-attachments/assets/7fd8b1f9-e21c-4196-a02b-d4f0c77da014" />
+<img width="1872" height="922" alt="image" src="https://github.com/user-attachments/assets/7459b395-a73a-49f7-b4f0-4208ab11960d" />
